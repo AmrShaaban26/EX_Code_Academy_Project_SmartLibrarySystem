@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "C/C++: g++.exe build active file",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"if exist src\\*.cpp (c:\\mingw64UCRT\\bin\\g++.exe -fdiagnostics-color=always -g -I include main.cpp src\\*.cpp -o main.exe) else (c:\\mingw64UCRT\\bin\\g++.exe -fdiagnostics-color=always -g -I include main.cpp -o main.exe)"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: c:\\mingw64UCRT\\bin\\g++.exe"
+		}
+	]
+}
